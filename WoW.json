@@ -1,6 +1,66 @@
 {
-    "current_program_scene": "Game - 4 Colors",
-    "current_scene": "Game - 4 Colors",
+    "AuxAudioDevice1": {
+        "balance": 0.5,
+        "deinterlace_field_order": 0,
+        "deinterlace_mode": 0,
+        "enabled": true,
+        "flags": 0,
+        "hotkeys": {
+            "libobs.mute": [],
+            "libobs.push-to-mute": [],
+            "libobs.push-to-talk": [],
+            "libobs.unmute": []
+        },
+        "id": "wasapi_input_capture",
+        "mixers": 255,
+        "monitoring_type": 0,
+        "muted": false,
+        "name": "Mic/Aux",
+        "prev_ver": 419430408,
+        "private_settings": {},
+        "push-to-mute": false,
+        "push-to-mute-delay": 0,
+        "push-to-talk": false,
+        "push-to-talk-delay": 0,
+        "settings": {
+            "device_id": "{0.0.1.00000000}.{8bed58a3-f46a-4a0d-beeb-9216da964303}"
+        },
+        "sync": 0,
+        "versioned_id": "wasapi_input_capture",
+        "volume": 0.1974962055683136
+    },
+    "DesktopAudioDevice1": {
+        "balance": 0.5,
+        "deinterlace_field_order": 0,
+        "deinterlace_mode": 0,
+        "enabled": true,
+        "flags": 0,
+        "hotkeys": {
+            "libobs.mute": [],
+            "libobs.push-to-mute": [],
+            "libobs.push-to-talk": [],
+            "libobs.unmute": []
+        },
+        "id": "wasapi_output_capture",
+        "mixers": 255,
+        "monitoring_type": 0,
+        "muted": false,
+        "name": "Desktop Audio",
+        "prev_ver": 419430408,
+        "private_settings": {},
+        "push-to-mute": false,
+        "push-to-mute-delay": 0,
+        "push-to-talk": false,
+        "push-to-talk-delay": 0,
+        "settings": {
+            "device_id": "{0.0.0.00000000}.{f32b10ed-1122-433f-ba54-a4d21d754793}"
+        },
+        "sync": 0,
+        "versioned_id": "wasapi_output_capture",
+        "volume": 1.0
+    },
+    "current_program_scene": "Game Big - Webcam Small",
+    "current_scene": "Game Big - Webcam Small",
     "current_transition": "Move",
     "groups": [
         {
@@ -37,7 +97,10 @@
                 }
             ],
             "flags": 0,
-            "hotkeys": {},
+            "hotkeys": {
+                "libobs.hide_scene_item.Game Capture": [],
+                "libobs.show_scene_item.Game Capture": []
+            },
             "id": "group",
             "mixers": 0,
             "monitoring_type": 0,
@@ -124,7 +187,10 @@
                 }
             ],
             "flags": 0,
-            "hotkeys": {},
+            "hotkeys": {
+                "libobs.hide_scene_item.Game Capture": [],
+                "libobs.show_scene_item.Game Capture": []
+            },
             "id": "group",
             "mixers": 0,
             "monitoring_type": 0,
@@ -211,7 +277,10 @@
                 }
             ],
             "flags": 0,
-            "hotkeys": {},
+            "hotkeys": {
+                "libobs.hide_scene_item.Game Capture": [],
+                "libobs.show_scene_item.Game Capture": []
+            },
             "id": "group",
             "mixers": 0,
             "monitoring_type": 0,
@@ -298,7 +367,10 @@
                 }
             ],
             "flags": 0,
-            "hotkeys": {},
+            "hotkeys": {
+                "libobs.hide_scene_item.Game Capture": [],
+                "libobs.show_scene_item.Game Capture": []
+            },
             "id": "group",
             "mixers": 0,
             "monitoring_type": 0,
@@ -357,7 +429,12 @@
             "deinterlace_mode": 0,
             "enabled": true,
             "flags": 0,
-            "hotkeys": {},
+            "hotkeys": {
+                "libobs.hide_scene_item.--game": [],
+                "libobs.hide_scene_item.Webcam Frame": [],
+                "libobs.show_scene_item.--game": [],
+                "libobs.show_scene_item.Webcam Frame": []
+            },
             "id": "group",
             "mixers": 0,
             "monitoring_type": 0,
@@ -494,15 +571,27 @@
     ],
     "saved_projectors": [],
     "scaling_enabled": false,
-    "scaling_level": -4,
+    "scaling_level": 0,
     "scaling_off_x": 0.0,
     "scaling_off_y": 0.0,
     "scene_order": [
         {
-            "name": "Game"
+            "name": "-- Bongo Cat --"
         },
         {
-            "name": "Game - 4 Colors"
+            "name": "Bongo Cat"
+        },
+        {
+            "name": "-- Move Transition --"
+        },
+        {
+            "name": "Game Big - Webcam Small"
+        },
+        {
+            "name": "Game Small - Webcam big"
+        },
+        {
+            "name": "Game - Multi  Color Grid"
         },
         {
             "name": "Game - 50 50"
@@ -511,13 +600,19 @@
             "name": "Game - 50 50 Clean"
         },
         {
-            "name": "--------------------------"
+            "name": "-- Assets --"
         },
         {
             "name": "--game"
         },
         {
+            "name": "--game border"
+        },
+        {
             "name": "--webcam"
+        },
+        {
+            "name": "--poll"
         }
     ],
     "sources": [
@@ -528,16 +623,559 @@
             "enabled": true,
             "flags": 0,
             "hotkeys": {
+                "OBSBasic.SelectScene": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "-- Move Transition --",
+            "prev_ver": 419430408,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": false,
+                "id_counter": 0,
+                "items": []
+            },
+            "sync": 0,
+            "versioned_id": "scene",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.Game Capture": [],
+                "libobs.hide_scene_item.Webcam Frame": [],
+                "libobs.show_scene_item.Game Capture": [],
+                "libobs.show_scene_item.Webcam Frame": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "--game border",
+            "prev_ver": 419430408,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": false,
+                "id_counter": 2,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 1,
+                        "locked": false,
+                        "name": "Game Capture",
+                        "pos": {
+                            "x": 74.0,
+                            "y": 43.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.93541663885116577,
+                            "y": 0.93518519401550293
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 2,
+                        "locked": false,
+                        "name": "Webcam Frame",
+                        "pos": {
+                            "x": 21.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.7982954978942871,
+                            "y": 1.7986688613891602
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "versioned_id": "scene",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.Webcam": [],
+                "libobs.show_scene_item.Webcam": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Game Small - Webcam big",
+            "prev_ver": 419430408,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": false,
+                "id_counter": 4,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 3,
+                        "locked": false,
+                        "name": "Webcam",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.5,
+                            "y": 1.5
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "versioned_id": "scene",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "filters": [
+                {
+                    "balance": 0.5,
+                    "deinterlace_field_order": 0,
+                    "deinterlace_mode": 0,
+                    "enabled": true,
+                    "flags": 0,
+                    "hotkeys": {},
+                    "id": "move_source_filter",
+                    "mixers": 0,
+                    "monitoring_type": 0,
+                    "muted": false,
+                    "name": "Shock Face",
+                    "prev_ver": 419430408,
+                    "private_settings": {},
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "settings": {
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "crop_bottom": 206,
+                        "crop_left": 249,
+                        "crop_right": 338,
+                        "crop_top": 122,
+                        "curve_match": -0.01,
+                        "duration": 300,
+                        "easing_match": 3,
+                        "next_move": "",
+                        "pos": {
+                            "x": 475.0,
+                            "y": 279.0
+                        },
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.68300002813339233,
+                            "y": 0.68400001525878906
+                        },
+                        "source": "--webcam",
+                        "start_trigger": 0,
+                        "transform_text": "pos: {475,279}, rot: 0.0, scale: {0.683,0.684}, bounds: {0,0}, crop: {249,122,338,206}"
+                    },
+                    "sync": 0,
+                    "versioned_id": "move_source_filter",
+                    "volume": 1.0
+                },
+                {
+                    "balance": 0.5,
+                    "deinterlace_field_order": 0,
+                    "deinterlace_mode": 0,
+                    "enabled": true,
+                    "flags": 0,
+                    "hotkeys": {},
+                    "id": "move_source_filter",
+                    "mixers": 0,
+                    "monitoring_type": 0,
+                    "muted": false,
+                    "name": "Origin",
+                    "prev_ver": 419430408,
+                    "private_settings": {},
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "settings": {
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "crop_bottom": 206,
+                        "crop_left": 249,
+                        "crop_right": 338,
+                        "crop_top": 122,
+                        "pos": {
+                            "x": 1339.0,
+                            "y": 748.0
+                        },
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.41999998688697815,
+                            "y": 0.41999998688697815
+                        },
+                        "source": "--webcam",
+                        "transform_text": "pos: {1339,748}, rot: 0.0, scale: {0.420,0.420}, bounds: {0,0}, crop: {249,122,338,206}"
+                    },
+                    "sync": 0,
+                    "versioned_id": "move_source_filter",
+                    "volume": 1.0
+                },
+                {
+                    "balance": 0.5,
+                    "deinterlace_field_order": 0,
+                    "deinterlace_mode": 0,
+                    "enabled": true,
+                    "flags": 0,
+                    "hotkeys": {},
+                    "id": "move_source_filter",
+                    "mixers": 0,
+                    "monitoring_type": 0,
+                    "muted": false,
+                    "name": "Poll",
+                    "prev_ver": 419430408,
+                    "private_settings": {},
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "settings": {
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "crop_bottom": 362,
+                        "crop_left": 435,
+                        "crop_right": 941,
+                        "crop_top": 366,
+                        "easing_function_match": 3,
+                        "pos": {
+                            "x": 679.0,
+                            "y": 362.0
+                        },
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.95899999141693115,
+                            "y": 0.95899999141693115
+                        },
+                        "source": "--poll",
+                        "start_trigger": 1,
+                        "transform_text": "pos: {679,362}, rot: 0.0, scale: {0.959,0.959}, bounds: {0,0}, crop: {435,366,941,362}"
+                    },
+                    "sync": 0,
+                    "versioned_id": "move_source_filter",
+                    "volume": 1.0
+                }
+            ],
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "Origin": [
+                    {
+                        "key": "OBS_KEY_F2"
+                    }
+                ],
+                "Poll": [],
+                "Shock Face": [
+                    {
+                        "key": "OBS_KEY_F1"
+                    }
+                ],
+                "libobs.hide_scene_item.--game": [],
+                "libobs.hide_scene_item.--poll": [],
+                "libobs.hide_scene_item.--webcam": [],
+                "libobs.show_scene_item.--game": [],
+                "libobs.show_scene_item.--poll": [],
+                "libobs.show_scene_item.--webcam": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Game Big - Webcam Small",
+            "prev_ver": 419430408,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": false,
+                "id_counter": 3,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 1,
+                        "locked": false,
+                        "name": "--game",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 362,
+                        "crop_left": 435,
+                        "crop_right": 941,
+                        "crop_top": 366,
+                        "group_item_backup": false,
+                        "id": 2,
+                        "locked": false,
+                        "name": "--poll",
+                        "pos": {
+                            "x": 679.0,
+                            "y": 362.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.95899999141693115,
+                            "y": 0.95899999141693115
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 206,
+                        "crop_left": 249,
+                        "crop_right": 338,
+                        "crop_top": 122,
+                        "group_item_backup": false,
+                        "id": 3,
+                        "locked": false,
+                        "name": "--webcam",
+                        "pos": {
+                            "x": 1339.0,
+                            "y": 748.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.41999998688697815,
+                            "y": 0.41999998688697815
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "versioned_id": "scene",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "browser_source",
+            "mixers": 255,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "poll",
+            "prev_ver": 419430408,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "url": "https://poll.ma.pe/overlay/e9293b99b772bcde1d1b1470514936b9870a13e15d5587d74d779e9c10423281/"
+            },
+            "sync": 0,
+            "versioned_id": "browser_source",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.poll": [],
+                "libobs.show_scene_item.poll": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "--poll",
+            "prev_ver": 419430408,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": false,
+                "id_counter": 1,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 1,
+                        "locked": false,
+                        "name": "poll",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.7999999523162842,
+                            "y": 1.7999999523162842
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "versioned_id": "scene",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
                 "OBSBasic.SelectScene": [],
                 "libobs.hide_scene_item.--webcam": [],
                 "libobs.hide_scene_item.Blue": [],
-                "libobs.hide_scene_item.Game Capture": [],
                 "libobs.hide_scene_item.Green": [],
                 "libobs.hide_scene_item.Red": [],
                 "libobs.hide_scene_item.Yellow": [],
                 "libobs.show_scene_item.--webcam": [],
                 "libobs.show_scene_item.Blue": [],
-                "libobs.show_scene_item.Game Capture": [],
                 "libobs.show_scene_item.Green": [],
                 "libobs.show_scene_item.Red": [],
                 "libobs.show_scene_item.Yellow": []
@@ -546,7 +1184,7 @@
             "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
-            "name": "Game - 4 Colors",
+            "name": "Game - Multi  Color Grid",
             "prev_ver": 419430408,
             "private_settings": {},
             "push-to-mute": false,
@@ -862,7 +1500,7 @@
             "settings": {
                 "close_when_inactive": true,
                 "hw_decode": true,
-                "local_file": "C:/wow/videoplayback.mp4",
+                "local_file": "C:/World-of-Warcraft-Overlay/wallpaper.mp4",
                 "looping": true
             },
             "sync": 0,
@@ -899,7 +1537,7 @@
             "settings": {
                 "close_when_inactive": true,
                 "hw_decode": true,
-                "local_file": "C:/wow/Shadowfeather.mov",
+                "local_file": "C:/World-of-Warcraft-Overlay/webcam.mov",
                 "looping": true
             },
             "sync": 0,
@@ -951,15 +1589,11 @@
                 "Backward [ Split ] ": [],
                 "Forward [ Split ] ": [],
                 "OBSBasic.SelectScene": [],
-                "libobs.hide_scene_item.--game": [],
                 "libobs.hide_scene_item.--webcam": [],
                 "libobs.hide_scene_item.Group": [],
-                "libobs.hide_scene_item.Webcam Frame": [],
                 "libobs.hide_scene_item.background": [],
-                "libobs.show_scene_item.--game": [],
                 "libobs.show_scene_item.--webcam": [],
                 "libobs.show_scene_item.Group": [],
-                "libobs.show_scene_item.Webcam Frame": [],
                 "libobs.show_scene_item.background": []
             },
             "id": "scene",
@@ -975,7 +1609,7 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 6,
+                "id_counter": 9,
                 "items": [
                     {
                         "align": 5,
@@ -1023,14 +1657,14 @@
                         "locked": false,
                         "name": "--webcam",
                         "pos": {
-                            "x": 46.99993896484375,
+                            "x": 40.00006103515625,
                             "y": 263.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": 0.69528877735137939,
-                            "y": 0.69500672817230225
+                            "x": 0.70060789585113525,
+                            "y": 0.70040488243103027
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -1052,7 +1686,7 @@
                         "locked": true,
                         "name": "--game",
                         "pos": {
-                            "x": 984.77679443359375,
+                            "x": 984.77685546875,
                             "y": 272.10638427734375
                         },
                         "private_settings": {},
@@ -1081,7 +1715,7 @@
                         "locked": false,
                         "name": "Webcam Frame",
                         "pos": {
-                            "x": 962.0,
+                            "x": 962.00006103515625,
                             "y": 254.0
                         },
                         "private_settings": {},
@@ -1110,10 +1744,12 @@
                         "locked": false,
                         "name": "Group",
                         "pos": {
-                            "x": 962.0,
+                            "x": 962.00006103515625,
                             "y": 254.0
                         },
-                        "private_settings": {},
+                        "private_settings": {
+                            "collapsed": true
+                        },
                         "rot": 0.0,
                         "scale": {
                             "x": 1.1109770536422729,
@@ -1126,31 +1762,6 @@
             },
             "sync": 0,
             "versioned_id": "scene",
-            "volume": 1.0
-        },
-        {
-            "balance": 0.5,
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {},
-            "id": "image_source",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "Wallpaper",
-            "prev_ver": 419430408,
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "file": "C:/wow/146356.jpg"
-            },
-            "sync": 0,
-            "versioned_id": "image_source",
             "volume": 1.0
         },
         {
@@ -1235,8 +1846,8 @@
                         "locked": false,
                         "name": "--webcam",
                         "pos": {
-                            "x": -966.0,
-                            "y": -252.0
+                            "x": -961.0,
+                            "y": -254.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
@@ -1264,7 +1875,7 @@
                         "locked": false,
                         "name": "--game",
                         "pos": {
-                            "x": 917.0,
+                            "x": 930.0,
                             "y": 0.0
                         },
                         "private_settings": {},
@@ -1272,201 +1883,6 @@
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    }
-                ]
-            },
-            "sync": 0,
-            "versioned_id": "scene",
-            "volume": 1.0
-        },
-        {
-            "balance": 0.5,
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "filters": [
-                {
-                    "balance": 0.5,
-                    "deinterlace_field_order": 0,
-                    "deinterlace_mode": 0,
-                    "enabled": true,
-                    "flags": 0,
-                    "hotkeys": {},
-                    "id": "move_source_filter",
-                    "mixers": 0,
-                    "monitoring_type": 0,
-                    "muted": false,
-                    "name": "Shock Face",
-                    "prev_ver": 419430408,
-                    "private_settings": {},
-                    "push-to-mute": false,
-                    "push-to-mute-delay": 0,
-                    "push-to-talk": false,
-                    "push-to-talk-delay": 0,
-                    "settings": {
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_bottom": 206,
-                        "crop_left": 249,
-                        "crop_right": 338,
-                        "crop_top": 122,
-                        "curve_match": -0.01,
-                        "duration": 300,
-                        "easing_match": 3,
-                        "next_move": "",
-                        "pos": {
-                            "x": 449.0,
-                            "y": 242.0
-                        },
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 0.74599999189376831,
-                            "y": 0.74599999189376831
-                        },
-                        "source": "--webcam",
-                        "start_trigger": 0,
-                        "transform_text": "pos: {449,242}, rot: 0.0, scale: {0.746,0.746}, bounds: {0,0}, crop: {249,122,338,206}"
-                    },
-                    "sync": 0,
-                    "versioned_id": "move_source_filter",
-                    "volume": 1.0
-                },
-                {
-                    "balance": 0.5,
-                    "deinterlace_field_order": 0,
-                    "deinterlace_mode": 0,
-                    "enabled": true,
-                    "flags": 0,
-                    "hotkeys": {},
-                    "id": "move_source_filter",
-                    "mixers": 0,
-                    "monitoring_type": 0,
-                    "muted": false,
-                    "name": "Origin",
-                    "prev_ver": 419430408,
-                    "private_settings": {},
-                    "push-to-mute": false,
-                    "push-to-mute-delay": 0,
-                    "push-to-talk": false,
-                    "push-to-talk-delay": 0,
-                    "settings": {
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_bottom": 206,
-                        "crop_left": 249,
-                        "crop_right": 338,
-                        "crop_top": 122,
-                        "pos": {
-                            "x": 1339.0,
-                            "y": 748.0
-                        },
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 0.41999998688697815,
-                            "y": 0.41999998688697815
-                        },
-                        "source": "--webcam",
-                        "transform_text": "pos: {1339,748}, rot: 0.0, scale: {0.420,0.420}, bounds: {0,0}, crop: {249,122,338,206}"
-                    },
-                    "sync": 0,
-                    "versioned_id": "move_source_filter",
-                    "volume": 1.0
-                }
-            ],
-            "flags": 0,
-            "hotkeys": {
-                "OBSBasic.SelectScene": [],
-                "Origin": [
-                    {
-                        "key": "OBS_KEY_F1"
-                    }
-                ],
-                "Shock Face": [
-                    {
-                        "key": "OBS_KEY_F2"
-                    }
-                ],
-                "libobs.hide_scene_item.--game": [],
-                "libobs.hide_scene_item.--webcam": [],
-                "libobs.show_scene_item.--game": [],
-                "libobs.show_scene_item.--webcam": []
-            },
-            "id": "scene",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "Game",
-            "prev_ver": 419430408,
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "custom_size": false,
-                "id_counter": 4,
-                "items": [
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 2,
-                        "locked": true,
-                        "name": "--game",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 206,
-                        "crop_left": 249,
-                        "crop_right": 338,
-                        "crop_top": 122,
-                        "group_item_backup": false,
-                        "id": 4,
-                        "locked": true,
-                        "name": "--webcam",
-                        "pos": {
-                            "x": 1339.0,
-                            "y": 748.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 0.42010504007339478,
-                            "y": 0.42021277546882629
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -1574,13 +1990,9 @@
             "enabled": true,
             "flags": 0,
             "hotkeys": {
-                "Move Source": [],
                 "OBSBasic.SelectScene": [],
-                "Shock Face": [],
-                "libobs.hide_scene_item.Image": [],
                 "libobs.hide_scene_item.Webcam": [],
                 "libobs.hide_scene_item.Webcam Frame": [],
-                "libobs.show_scene_item.Image": [],
                 "libobs.show_scene_item.Webcam": [],
                 "libobs.show_scene_item.Webcam Frame": []
             },
@@ -1688,7 +2100,7 @@
                     "push-to-talk": false,
                     "push-to-talk-delay": 0,
                     "settings": {
-                        "transform_text": "pos: {49258120924364800,0}, rot: 0.0, scale: {-0.000,0.000}, bounds: {0,0}, crop: {0,0,0,0}"
+                        "transform_text": "pos: {0,0}, rot: 0.0, scale: {-4253513154560.000,0.000}, bounds: {0,0}, crop: {0,0,0,0}"
                     },
                     "sync": 0,
                     "versioned_id": "move_source_filter",
@@ -1716,38 +2128,13 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "last_resolution": "1280x720",
-                "last_video_device_id": "HD Pro Webcam C920:\\\\?\\usb#22vid_046d&pid_0892&mi_00#227&aec60bb&0&0000#22{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global",
+                "last_video_device_id": "Snap Camera:\\\\?\\root#22camera#220000#22{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global",
                 "res_type": 1,
                 "resolution": "1280x720",
-                "video_device_id": "HD Pro Webcam C920:\\\\?\\usb#22vid_046d&pid_0892&mi_00#227&aec60bb&0&0000#22{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global"
+                "video_device_id": "Snap Camera:\\\\?\\root#22camera#220000#22{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global"
             },
             "sync": 0,
             "versioned_id": "dshow_input",
-            "volume": 1.0
-        },
-        {
-            "balance": 0.5,
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {},
-            "id": "image_source",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "Image",
-            "prev_ver": 419430408,
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "file": "C:/wow/cam_box.png"
-            },
-            "sync": 0,
-            "versioned_id": "image_source",
             "volume": 1.0
         },
         {
@@ -1763,7 +2150,7 @@
             "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
-            "name": "--------------------------",
+            "name": "-- Assets --",
             "prev_ver": 419430408,
             "private_settings": {},
             "push-to-mute": false,
@@ -1778,6 +2165,324 @@
             "sync": 0,
             "versioned_id": "scene",
             "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "-- Bongo Cat --",
+            "prev_ver": 419430408,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": false,
+                "id_counter": 0,
+                "items": []
+            },
+            "sync": 0,
+            "versioned_id": "scene",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "filters": [
+                {
+                    "balance": 0.5,
+                    "deinterlace_field_order": 0,
+                    "deinterlace_mode": 0,
+                    "enabled": true,
+                    "flags": 0,
+                    "hotkeys": {},
+                    "id": "move_source_filter",
+                    "mixers": 0,
+                    "monitoring_type": 0,
+                    "muted": false,
+                    "name": "Shock Face",
+                    "prev_ver": 419430408,
+                    "private_settings": {},
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "settings": {
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "crop_bottom": 206,
+                        "crop_left": 249,
+                        "crop_right": 338,
+                        "crop_top": 122,
+                        "curve_match": -0.01,
+                        "duration": 300,
+                        "easing_match": 3,
+                        "next_move": "",
+                        "pos": {
+                            "x": 475.0,
+                            "y": 279.0
+                        },
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.68300002813339233,
+                            "y": 0.68400001525878906
+                        },
+                        "source": "--webcam",
+                        "start_trigger": 0,
+                        "transform_text": "pos: {475,279}, rot: 0.0, scale: {0.683,0.684}, bounds: {0,0}, crop: {249,122,338,206}"
+                    },
+                    "sync": 0,
+                    "versioned_id": "move_source_filter",
+                    "volume": 1.0
+                },
+                {
+                    "balance": 0.5,
+                    "deinterlace_field_order": 0,
+                    "deinterlace_mode": 0,
+                    "enabled": true,
+                    "flags": 0,
+                    "hotkeys": {},
+                    "id": "move_source_filter",
+                    "mixers": 0,
+                    "monitoring_type": 0,
+                    "muted": false,
+                    "name": "Origin",
+                    "prev_ver": 419430408,
+                    "private_settings": {},
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "settings": {
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "crop_bottom": 206,
+                        "crop_left": 249,
+                        "crop_right": 338,
+                        "crop_top": 122,
+                        "pos": {
+                            "x": 1339.0,
+                            "y": 748.0
+                        },
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.41999998688697815,
+                            "y": 0.41999998688697815
+                        },
+                        "source": "--webcam",
+                        "transform_text": "pos: {1339,748}, rot: 0.0, scale: {0.420,0.420}, bounds: {0,0}, crop: {249,122,338,206}"
+                    },
+                    "sync": 0,
+                    "versioned_id": "move_source_filter",
+                    "volume": 1.0
+                },
+                {
+                    "balance": 0.5,
+                    "deinterlace_field_order": 0,
+                    "deinterlace_mode": 0,
+                    "enabled": true,
+                    "flags": 0,
+                    "hotkeys": {},
+                    "id": "move_source_filter",
+                    "mixers": 0,
+                    "monitoring_type": 0,
+                    "muted": false,
+                    "name": "Poll",
+                    "prev_ver": 419430408,
+                    "private_settings": {},
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "settings": {
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "crop_bottom": 362,
+                        "crop_left": 435,
+                        "crop_right": 941,
+                        "crop_top": 366,
+                        "easing_function_match": 3,
+                        "pos": {
+                            "x": 679.0,
+                            "y": 362.0
+                        },
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.95899999141693115,
+                            "y": 0.95899999141693115
+                        },
+                        "source": "--poll",
+                        "start_trigger": 1,
+                        "transform_text": "pos: {679,362}, rot: 0.0, scale: {0.959,0.959}, bounds: {0,0}, crop: {435,366,941,362}"
+                    },
+                    "sync": 0,
+                    "versioned_id": "move_source_filter",
+                    "volume": 1.0
+                }
+            ],
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "Origin": [],
+                "Poll": [],
+                "Shock Face": [],
+                "libobs.hide_scene_item.--game": [],
+                "libobs.hide_scene_item.--poll": [],
+                "libobs.hide_scene_item.bango cat": [],
+                "libobs.show_scene_item.--game": [],
+                "libobs.show_scene_item.--poll": [],
+                "libobs.show_scene_item.bango cat": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Bongo Cat",
+            "prev_ver": 419430408,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": false,
+                "id_counter": 4,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 1,
+                        "locked": false,
+                        "name": "--game",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 362,
+                        "crop_left": 435,
+                        "crop_right": 941,
+                        "crop_top": 366,
+                        "group_item_backup": false,
+                        "id": 2,
+                        "locked": false,
+                        "name": "--poll",
+                        "pos": {
+                            "x": 679.0,
+                            "y": 362.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.95899999141693115,
+                            "y": 0.95899999141693115
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 4,
+                        "locked": false,
+                        "name": "bango cat",
+                        "pos": {
+                            "x": 1222.696044921875,
+                            "y": 679.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.59712839126586914,
+                            "y": 0.59714287519454956
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "versioned_id": "scene",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "Live2D",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "bango cat",
+            "prev_ver": 419430408,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "delay": 3.7999999999999998
+            },
+            "sync": 0,
+            "versioned_id": "Live2D",
+            "volume": 1.0
         }
     ],
     "transition_duration": 300,
@@ -1790,6 +2495,7 @@
                 "curve_in": 0.10000000000000001,
                 "easing_function_in": 6,
                 "easing_match": 1,
+                "name_number_match": true,
                 "name_part_match": true,
                 "switch_percentage": 67,
                 "transition_match": "Cut",
