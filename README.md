@@ -14,6 +14,8 @@ Go to scene-box/install
 
 Load OBS and to go Scene Collection > Import
 
+Look under the --asset-- section scene and update --game and --webcam with your own devices / game.
+
 ## Contact Information
 
 E-mail: business@talking-boxes.com
