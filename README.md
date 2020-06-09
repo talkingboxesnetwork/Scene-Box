@@ -32,4 +32,8 @@ Move Transition: https://github.com/exeldro/obs-move-transition
 
 Bongobs Cat: https://github.com/a1928370421/Bongobs-Cat-Plugin
 
+Input Overlay: https://github.com/univrsal/input-overlay
+
+Spectralizer: https://github.com/univrsal/spectralizer
+
 ** If you do not currently have a C: drive then you will need to open scene-box.json and 'find and replace' C:/ with your drive letter / new prefered folder location. This unfortunate method will be will be addressed in future versions. 
