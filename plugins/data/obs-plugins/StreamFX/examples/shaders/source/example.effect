@@ -1,0 +1,181 @@
+// Always provided by OBS
+uniform float4x4 ViewProj<
+	bool visible = false;
+	string name = "View Projection Matrix";
+>;
+
+// Provided by Stream Effects
+uniform float4 Time<
+	bool visible = false;
+	string name = "Time Array";
+	string description = "A float array of length 4, with the indexes being:\n[0] Time Visible in Seconds\n[1] Last Render Time\n[2] Current System Time (24h looping)\n[3] Random value between 0 and 1.";
+>;
+/*uniform float4x4 Random<
+	bool visible = false;
+	string name = "Random Matrix";
+	string description = "A float4x4 value containing random values between 0 and 1. Changes every frame.";
+>;
+uniform float4x4 Seed<
+	bool visible = false;
+	string name = "Seed Matrix";
+	string description = "A float4x4 value containing random seeds values between 0 and 1. Values determined once on Source creation.";
+>;*/
+
+// Parameters
+uniform bool BoolParameter<
+	bool visible = true;
+	string name = "Bool Parameter";
+	string description = "Example";
+>;
+/*uniform int IntParameter<
+	bool visible = true;
+	string name = "Int Parameter";
+	string description = "Example";
+>;
+uniform int2 Int2Parameter<
+	bool visible = true;
+	string name = "Int2 Parameter";
+	string description = "Example";
+>;
+uniform int3 Int3Parameter<
+	bool visible = true;
+	string name = "Int3 Parameter";
+	string description = "Example";
+>;
+uniform int4 Int4Parameter<
+	bool visible = true;
+	string name = "Int4 Parameter";
+	string description = "Example";
+>;*/
+uniform float FloatParameter<
+	bool visible = true;
+	string name = "Float Parameter";
+	string description = "Example";
+>;
+uniform float2 Float2Parameter<
+	bool visible = true;
+	string name = "Float2 Parameter";
+	string description = "Example";
+>;
+uniform float3 Float3Parameter<
+	bool visible = true;
+	string name = "Float3 Parameter";
+	string description = "Example";
+>;
+uniform float4 Float4Parameter<
+	bool visible = true;
+	string name = "Float4 Parameter";
+	string description = "Example";
+>;
+
+// ---------- Shader Code
+sampler_state def_sampler {
+	AddressU  = Wrap;
+	AddressV  = Wrap;
+	Filter    = Linear;
+};
+
+struct VertData {
+	float4 pos : POSITION;
+	float2 uv  : TEXCOORD0;
+};
+
+struct FragData {
+	float4 pos : POSITION;
+	float2 uv  : TEXCOORD0;
+};
+
+FragData VSDefault(VertData v_in) {
+	FragData vert_out;
+	vert_out.pos = mul(float4(v_in.pos.xyz, 1.0), ViewProj);
+	vert_out.uv  = v_in.uv;
+	return vert_out;
+}
+
+float4 PSTime(FragData v_in) : TARGET {
+	return float4(
+		cos(Time[0] * 5.) * 0.5 + 0.5,
+		cos(Time[0] * 0.) * 0.5 + 0.5,
+		cos(Time[0] * 0.) * 0.5 + 0.5,
+		1.0);
+}
+
+technique Draw
+{
+	pass
+	{
+		vertex_shader = VSDefault(v_in);
+		pixel_shader  = PSTime(v_in); 
+	}
+}
+
+float4 PSBool(FragData v_in) : TARGET {
+	if (BoolParameter)	
+		return float4(
+			cos(Time[0] * 5.) * 0.5 + 0.5,
+			cos(Time[0] * 0.) * 0.5 + 0.5,
+			cos(Time[0] * 0.) * 0.5 + 0.5,
+			1.0);
+	return float4(0, 0, 0, 1.0);
+}
+
+technique Bool
+{
+	pass
+	{
+		vertex_shader = VSDefault(v_in);
+		pixel_shader  = PSBool(v_in); 
+	}
+}
+
+float4 PSFloat(FragData v_in) : TARGET {
+	return float4(FloatParameter.xxx, 1.0);
+}
+
+technique Float
+{
+	pass
+	{
+		vertex_shader = VSDefault(v_in);
+		pixel_shader  = PSFloat(v_in); 
+	}
+}
+
+float4 PSFloat2(FragData v_in) : TARGET {
+	return Float2Parameter.xxxy;
+}
+
+technique Float2
+{
+	pass
+	{
+		vertex_shader = VSDefault(v_in);
+		pixel_shader  = PSFloat2(v_in); 
+	}
+}
+
+float4 PSFloat3(FragData v_in) : TARGET {
+	return float4(Float3Parameter, 1.0);
+}
+
+technique Float3
+{
+	pass
+	{
+		vertex_shader = VSDefault(v_in);
+		pixel_shader  = PSFloat3(v_in); 
+	}
+}
+
+float4 PSFloat4(FragData v_in) : TARGET {
+	return Float4Parameter;
+}
+
+technique Float4
+{
+	pass
+	{
+		vertex_shader = VSDefault(v_in);
+		pixel_shader  = PSFloat4(v_in); 
+	}
+}
